@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST||Create & Complete tasks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-tasks"></i>
+                <h1>TO-DO LIST</h1>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="group-selector">
+                <button class="group-btn active" data-group="status">
+                    <i class="fas fa-list-check"></i> Group by Status
+                </button>
+                <button class="group-btn" data-group="priority">
+                    <i class="fas fa-flag"></i> Group by Priority
+                </button>
+                <button class="group-btn" data-group="date">
+                    <i class="fas fa-calendar"></i> Group by Date
+                </button>
+            </div>
+            <div class="filter-section">
+                <select class="filter-select" id="priority-filter">
+                    <option value="all">All Priorities</option>
+                    <option value="high">High Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="low">Low Priority</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="task-manager">
+            <div class="panel">
+                <h2><i class="fas fa-plus-circle"></i> Add New Task</h2>
+                <form class="task-form" id="task-form">
+                    <div class="form-group">
+                        <label for="task-title">Task Title *</label>
+                        <input type="text" class="task-input" id="task-title" placeholder="Enter task title..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="task-description">Description</label>
+                        <textarea class="task-input" id="task-description" placeholder="Enter task description..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="task-date">Due Date</label>
+                        <input type="date" class="task-input" id="task-date">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="task-priority">Priority</label>
+                        <select class="task-input" id="task-priority">
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="add-btn">Add Task</button>
+                </form>
+
+                <h2><i class="fas fa-hourglass-half"></i> Pending Tasks</h2>
+                <div class="task-list" id="pending-tasks">
+                    <!-- Pending tasks will appear here -->
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2><i class="fas fa-check-circle"></i> Completed Tasks</h2>
+                <div class="task-list" id="completed-tasks">
+                    <!-- Completed tasks will appear here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-value" id="total-tasks">0</div>
+                <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="pending-count">0</div>
+                <div class="stat-label">Pending</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="completed-count">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="overdue-count">0</div>
+                <div class="stat-label">Overdue</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body> 
+</html>

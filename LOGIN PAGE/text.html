@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Login System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Secure Login System</h1>
+            <p>Access your account with enhanced security</p>
+        </div>
+        
+        <div class="card" id="auth-card">
+            <div class="tabs">
+                <div class="tab active" data-tab="login">Login</div>
+                <div class="tab" data-tab="register">Register</div>
+            </div>
+            
+            
+            <div class="form active" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="login-email" placeholder="Enter your email">
+                    </div>
+                    <div class="error-message" id="login-email-error">Email is required</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="login-password" placeholder="Enter your password">
+                    </div>
+                    <div class="error-message" id="login-password-error">Password is required</div>
+                </div>
+                
+                <button class="btn" id="login-btn">Login</button>
+            </div>
+            
+
+            <div class="form" id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="register-name" placeholder="Enter your full name">
+                    </div>
+                    <div class="error-message" id="register-name-error">Name is required</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-email">Email Address</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="register-email" placeholder="Enter your email">
+                    </div>
+                    <div class="error-message" id="register-email-error">Email is required</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="register-password" placeholder="Create a password (min 6 characters)">
+                    </div>
+                    <div class="error-message" id="register-password-error">Password must be at least 6 characters</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-confirm">Confirm Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="register-confirm" placeholder="Confirm your password">
+                    </div>
+                    <div class="error-message" id="register-confirm-error">Passwords do not match</div>
+                </div>
+                
+                <button class="btn" id="register-btn">Create Account</button>
+            </div>
+        </div>
+        
+
+        <div class="secured-page card" id="secured-page">
+            <i class="fas fa-lock"></i>
+            <h2>Welcome to Your Secure Dashboard</h2>
+            <p>You've successfully accessed the secured area of our application. This page demonstrates the authentication system working as intended.</p>
+            
+            <div class="feature">
+                <i class="fas fa-user-shield"></i>
+                <div class="feature-content">
+                    <h3>Your Session is Secured</h3>
+                    <p>Your connection is encrypted and your session is protected against unauthorized access.</p>
+                </div>
+            </div>
+            
+            <button class="btn logout-btn" id="logout-btn">Logout</button>
+        </div>
+    </div>
+    
+    <div class="notification" id="notification">
+        <i class="fas fa-exclamation-circle"></i> <span>This is a notification message</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

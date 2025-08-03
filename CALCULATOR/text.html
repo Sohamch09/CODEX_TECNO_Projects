@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeX Calculator - Where Tech Meets Talent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-calculator"></i>
+                <h1>CodeX Calculator</h1>
+            </div>
+            <!-- <p class="tagline">WHERE TECH MEETS TALENT</p> -->
+        </header>
+        
+        <div class="content">
+            <div class="description">
+                <h2><i class="fas fa-tasks"></i>CALCULATOR</h2>
+                <p>It takes a little skill to create a calculator with basic mathematical functionalities using CSS, HTML, and JavaScript. Calculators require an interactive interface to perform basic functions such as addition, subtraction, division, and multiplication.</p>
+                <!-- <p>It will need a display screen to display the user's input and give the results. The grid system in CSS is for the alignments of buttons on the calculator. The additional tools you need to build a fully functional calculator include eventListeners, if-else statements, operators, loops, and so on.</p> -->
+                
+                <!-- <a href="#" class="demo-btn">FOR DEMO CLICK HERE</a> -->
+                
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-code"></i>
+                        <span>HTML5 Structure</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>CSS3 Styling</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-cogs"></i>
+                        <span>JavaScript Logic</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Responsive Design</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Interactive UI</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-cube"></i>
+                        <span>Modern Grid Layout</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="calculator-container">
+                <div class="display">
+                    <div class="previous-operand" id="previous-operand"></div>
+                    <div class="current-operand" id="current-operand">0</div>
+                </div>
+                <div class="buttons">
+                    <button class="clear span-two" data-action="clear">C</button>
+                    <button class="delete" data-action="delete">DEL</button>
+                    <button class="operator" data-operation="÷">÷</button>
+                    <button data-number="7">7</button>
+                    <button data-number="8">8</button>
+                    <button data-number="9">9</button>
+                    <button class="operator" data-operation="×">×</button>
+                    <button data-number="4">4</button>
+                    <button data-number="5">5</button>
+                    <button data-number="6">6</button>
+                    <button class="operator" data-operation="-">-</button>
+                    <button data-number="1">1</button>
+                    <button data-number="2">2</button>
+                    <button data-number="3">3</button>
+                    <button class="operator" data-operation="+">+</button>
+                    <button class="span-two" data-number="0">0</button>
+                    <button data-number=".">.</button>
+                    <button class="operator equals" data-action="calculate">=</button>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>BASIC CALCULATIONS ARE ONLY APPLIED</p>
+            <p>If you are using Keyboard</p>
+            <p>***Please donn't use 'ENTER' button to get results, use '=' instead***</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
